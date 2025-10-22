@@ -3,11 +3,9 @@
 import { CartDrawer } from "@/components/cart/CartDrawer";
 import { ProductList } from "@/components/product/ProductList";
 import { Button } from "@/components/ui/button";
-import { useCartStore } from "@/stores/useCartStore";
 import { useProductStore } from "@/stores/useProductStore";
 import { useUserStore } from "@/stores/useUserStore";
-import Link from "next/link";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
   const store = useProductStore();

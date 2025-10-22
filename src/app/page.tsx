@@ -56,7 +56,7 @@ export default function Page() {
   const handleSubmit = () => {
     // valida tudo antes de mandar
     const isEmptyField = Object.entries(newUser).find(
-      ([_, value]) =>
+      ([, value]) =>
         (typeof value === "string" && value.trim() === "") ||
         value === null ||
         value === undefined
@@ -149,7 +149,7 @@ export default function Page() {
                     id="name"
                     placeholder="Seu nome completo"
                     onChange={(e) =>
-                      handleCreateUser("name", e.target.value as User["name"])
+                      handleCreateUser("name", e.target.value)
                     }
                   />
                 </div>
@@ -160,7 +160,7 @@ export default function Page() {
                     placeholder="email@exemplo.com"
                     type="email"
                     onChange={(e) =>
-                      handleCreateUser("email", e.target.value as User["email"])
+                      handleCreateUser("email", e.target.value)
                     }
                   />
                 </div>

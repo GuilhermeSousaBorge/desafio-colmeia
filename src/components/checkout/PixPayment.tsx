@@ -7,7 +7,7 @@ import { useCheckoutStore } from "@/stores/useCheckoutStore";
 import { useState } from "react";
 
 export const PixPayment = () => {
-  const { startPayment, payment, reset } = useCheckoutStore();
+  const { startPayment, payment } = useCheckoutStore();
   const [form, setForm] = useState({ cpf: "", email: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
